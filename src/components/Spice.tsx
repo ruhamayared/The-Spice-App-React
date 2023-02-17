@@ -1,0 +1,17 @@
+import { Link } from "react-router-dom"
+
+const Post = (props: any) => {
+  const spice = props.spice
+
+  return (
+    <div>
+    <img src={spice.image} alt={spice.name} />
+      <Link to={`/post/${spice.id}`}>
+        <h1>{spice.name}</h1>
+      </Link>
+      <h2>{spice.description}</h2>
+    </div>
+  )
+}
+
+export default Post
