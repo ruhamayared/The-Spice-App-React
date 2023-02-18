@@ -4,14 +4,14 @@
 
 ### Technologies Used
 
-####Backend
+#### Backend
 
 - Python
 - Django
 - Postgres
 - render.com
 
-####Frontend
+#### Frontend
 
 - Typescript
 - HTML
