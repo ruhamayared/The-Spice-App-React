@@ -10,7 +10,7 @@ interface SpiceProps {
 }
   }
 
-const Post = (props: SpiceProps) => {
+const Spice = (props: SpiceProps) => {
   const spice = props.spice
 
   return (
@@ -24,4 +24,4 @@ const Post = (props: SpiceProps) => {
   )
 }
 
-export default Post
+export default Spice
