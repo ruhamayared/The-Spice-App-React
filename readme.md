@@ -24,7 +24,7 @@
 | Route      | Element | Loader      | Action       | Summary                                         |
 | ---------- | ------- | ----------- | ------------ | ----------------------------------------------- |
 | /          | Index   | indexLoader |              | Loads up list of spices                         |
-| post/:id   | Show    | showLoader  |              | Loads up an individual spices                   |
+| spice/:id  | Show    | showLoader  |              | Loads up an individual spices                   |
 | create     | Create  |             | createAction | Handles submission of create form for one spice |
 | update/:id | Update  |             | updateAction | Handles submission of update form for one spice |
 | delete/:id | Delete  |             | deleteAction | Handles submission of delete form for one spice |
