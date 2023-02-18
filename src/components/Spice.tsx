@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom"
 
-const Post = (props: any) => {
+//Defining an interface for props to let TS know what the props objects looks like
+interface SpiceProps {
+  spice:{
+    id: number,
+    name: string,
+    description: string,
+    image: string,
+}
+  }
+
+const Post = (props: SpiceProps) => {
   const spice = props.spice
 
   return (
