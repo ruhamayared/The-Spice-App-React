@@ -2,14 +2,15 @@ import url from "./url"
 import { redirect } from "react-router-dom"
 
 // Create
-export async function createAction({ request }: any) {
+export async function CreateAction({ request }: any) {
   //Get form data
   const formData = await request.formData()
 
   // Construct new data
   const newSpice = {
-    subject: formData.get("subject"),
-    details: formData.get("details"),
+    name: formData.get("name"),
+    description: formData.get("description"),
+    image: formData.get("image"),
   }
 
   // Send request to backend
@@ -26,14 +27,15 @@ export async function createAction({ request }: any) {
 }
 
 // Update
-export async function updateAction({ request, params }: any) {
+export async function UpdateAction({ request, params }: any) {
   // Get form data
   const formData = await request.formData()
 
   // Construct new data
   const updatedSpice = {
-    subject: formData.get("subject"),
-    details: formData.get("details"),
+    name: formData.get("name"),
+    description: formData.get("description"),
+    image: formData.get("image"),
   }
 
   // Send request to backend
@@ -50,7 +52,7 @@ export async function updateAction({ request, params }: any) {
 }
 
 // Delete
-export async function deleteAction({ params }: any) {
+export async function DeleteAction({ params }: any) {
   // Send request to backend
   await fetch(url + params.id + "/", {
     method: "delete",
