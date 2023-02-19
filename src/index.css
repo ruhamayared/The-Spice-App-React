@@ -1,18 +1,28 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-image: url(https://i.imgur.com/R8aTAHT.jpg);
+  background-position: top;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-
-
 @layer components {
   
   .search-button {
-      @apply relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-orange-500 hover:bg-orange-200 rounded-2xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+      @apply relative flex items-center justify-center h-10 w-10 mt-2 mb-5 mx-auto shadow-lg bg-orange-400 hover:bg-orange-200 rounded-2xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
   }
 
   button{
-    @apply relative flex items-center justify-center mt-2 mb-2 mx-auto  p-1 shadow-lg bg-orange-500 hover:bg-orange-200 rounded-xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+    @apply flex items-center justify-center mt-2 mb-2 mx-auto p-1 shadow-lg bg-orange-400 hover:bg-orange-200 rounded-xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+  }
+
+  
+
+  input {
+    @apply block mx-auto w-full border-solid border-2 border-orange-300 rounded-md m-2 p-0.5;
   }
 
 }

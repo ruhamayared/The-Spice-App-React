@@ -15,8 +15,8 @@ const Spice = (props: SpiceProps) => {
 
   return (
     <div>
-      <div className="">
-        <img src={spice.image} alt={spice.name} className="w-full h-60" />
+      <div>
+        <img src={spice.image} alt={spice.name} className=" h-60" />
       </div>
       <Link to={`/spice/${spice.id}`}>
         <h1 className="text-center mt-5">{spice.name}</h1>

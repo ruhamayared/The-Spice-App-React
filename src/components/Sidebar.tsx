@@ -19,12 +19,13 @@ export default function SideBar(): any {
 
   return (
     <>
-      <div className="fixed top-20 bottom-20 left-0 h-screen w-40 m-0 flex flex-col shadow-lg bg-slate-500">
-        <p>
-          The ultimate tool for professional and aspiring cooks alike - designed to keep track
-          of all the exotic spices that are out there!
-        </p>
-        <div>
+      <div className="relative h-32 w-60 mt-10">
+        <div className="flex flex-col justify-center items-center bg-white rounded-lg shadow-md hover:shadow-lg border border-gray-200 p-4">
+          <p className="text-center mb-5">
+            The ultimate tool for professional and aspiring cooks alike - designed to keep
+            track of all the exotic spices that are out there!
+          </p>
+
           <form>
             <input type="text" className="search" name="name" placeholder="Search spices" />
             <button className="search-button">🔍</button>
