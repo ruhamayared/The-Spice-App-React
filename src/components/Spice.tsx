@@ -16,12 +16,13 @@ const Spice = (props: SpiceProps) => {
   return (
     <div>
       <div>
-        <img src={spice.image} alt={spice.name} className=" h-60" />
+        <img src={spice.image} alt={spice.name} className="h-60 rounded-lg" />
       </div>
       <Link to={`/spice/${spice.id}`}>
-        <h1 className="text-center mt-5">{spice.name}</h1>
+        <h1 className="text-center mt-5 text-lg font-medium hover:text-orange-500">
+          {spice.name}
+        </h1>
       </Link>
-      {/* <h2>{spice.description}</h2> */}
     </div>
   )
 }

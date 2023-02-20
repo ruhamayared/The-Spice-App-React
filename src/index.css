@@ -12,14 +12,12 @@
 @layer components {
   
   .search-button {
-      @apply relative flex items-center justify-center h-10 w-10 mt-2 mb-5 mx-auto shadow-lg bg-orange-400 hover:bg-orange-200 rounded-2xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+      @apply relative flex items-center justify-center h-10 w-10 mt-2 mb-5 mx-auto shadow-lg bg-orange-400 hover:bg-orange-300 rounded-2xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
   }
 
   button{
-    @apply flex items-center justify-center mt-2 mb-2 mx-auto p-1 shadow-lg bg-orange-400 hover:bg-orange-200 rounded-xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+    @apply flex items-center justify-center mt-2 mb-2 mx-auto p-1 shadow-lg bg-orange-400 hover:bg-orange-300 rounded-xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer text-white font-bold py-2 px-4;
   }
-
-  
 
   input {
     @apply block mx-auto w-full border-solid border-2 border-orange-300 rounded-md m-2 p-0.5;
