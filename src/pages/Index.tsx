@@ -1,75 +1,41 @@
 import Spice from "../components/Spice"
 import { useLoaderData } from "react-router-dom"
-import { Form } from "react-router-dom"
+import SideBar from "../components/Sidebar"
 import { useState } from "react"
 
 const Index = (props: any) => {
   const spices: any = useLoaderData()
+  const [filteredData, setFilteredData] = useState(spices)
 
-  // useState to clear form after submission
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
-  const [image, setImage] = useState("")
+  // Takes in an object as a parameter and calls setFilteredData to update the filteredData state variable.
+  function handleFilterData(filteredData: any) {
+    setFilteredData(filteredData)
+  }
 
-  // Search for spices function
-  // function searchSpice(string: any) {
-  //   return spices.filter((spice: any) => {
-  //     if (spice.name.includes(string)) {
-  //       return true
-  //     }
-  //     return false
-  //   })
-  // }
-
-  // For each spice in the array render a Spice component
   return (
     <>
-      <form>
-        <input type="text" className="search" name="name" placeholder="Search spices" />
-        <button>🔍</button>
-      </form>
+      <div className="Header">
+        <div className="flex items-center justify-between p-3 border-b-4 border-gray-500 ">
+          <h1 className="text-gray-700 text-4xl font-bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-500 from-green-700 underline underline-offset-3 decoration-8 decoration-pink-600">
+              THE
+            </span>{" "}
+            Spice App
+          </h1>
+        </div>
+      </div>
 
-      <h2>Create a Spice</h2>
-      <Form
-        onSubmit={(e) => {
-          setName(""), setDescription(""), setImage("")
-        }}
-        action="/create"
-        method="post"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Name of spice"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value)
-          }}
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="Description"
-          value={description}
-          onChange={(e) => {
-            setDescription(e.target.value)
-          }}
-        />
-        <input
-          type="text"
-          name="image"
-          placeholder="Image URL"
-          value={image}
-          onChange={(e) => {
-            setImage(e.target.value)
-          }}
-        />
-        <button>Create New Spice</button>
-      </Form>
+      <div className="main">
+        <SideBar handleFilterData={handleFilterData} />
 
-      {spices.map((spice: any) => (
-        <Spice spice={spice} key={spice.id} />
-      ))}
+        <div className="flex flex-wrap justify-center mt-5 mr-10">
+          {filteredData.map((spice: any) => (
+            <div className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60">
+              <Spice spice={spice} key={spice.id} />
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   )
 }
