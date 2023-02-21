@@ -25,14 +25,16 @@ const Index = (props: any) => {
         </div>
       </div>
 
-      <SideBar handleFilterData={handleFilterData} />
+      <div className="main">
+        <SideBar handleFilterData={handleFilterData} />
 
-      <div className="flex flex-wrap justify-center w-3/4 m-auto">
-        {filteredData.map((spice: any) => (
-          <div className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60">
-            <Spice spice={spice} key={spice.id} />
-          </div>
-        ))}
+        <div className="flex flex-wrap justify-center mt-5 mr-10">
+          {filteredData.map((spice: any) => (
+            <div className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60">
+              <Spice spice={spice} key={spice.id} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )

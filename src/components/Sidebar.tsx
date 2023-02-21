@@ -15,11 +15,15 @@ export default function SideBar(props: SidebarProps): any {
 
   return (
     <>
-      <div className="relative h-32 w-60 mt-10">
+      <div className="h-32 w-60 mt-10">
         <div className="flex flex-col justify-center items-center bg-white rounded-lg shadow-md hover:shadow-lg border border-gray-200 p-4">
           <p className="text-center mb-7">
-            The ultimate tool for professional and aspiring cooks alike - designed to keep
-            track of all the exotic spices that are out there!
+            The{" "}
+            <span className="underline underline-offset-2 decoration-2 decoration-pink-600">
+              ultimate tool
+            </span>{" "}
+            for professional and aspiring cooks alike - designed to keep track of all the
+            exotic spices that are out there!
           </p>
 
           <SearchForm handleFilterData={props.handleFilterData} />

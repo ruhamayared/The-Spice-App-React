@@ -4,6 +4,11 @@
   background-position: top;
 }
 
+.main{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,3 +29,4 @@
   }
 
 }
+
