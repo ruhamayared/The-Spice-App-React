@@ -1,9 +1,9 @@
 import Spice from "../components/Spice"
 import { useLoaderData } from "react-router-dom"
 import SideBar from "../components/Sidebar"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const Index = (props: any) => {
+const Index = () => {
   const spices: any = useLoaderData()
   const [filteredData, setFilteredData] = useState(spices)
 
@@ -11,6 +11,11 @@ const Index = (props: any) => {
   function handleFilterData(filteredData: any) {
     setFilteredData(filteredData)
   }
+
+  // Add a useEffect hook to listen for changes to the spices array and update filteredData accordingly.
+  useEffect(() => {
+    setFilteredData(spices)
+  }, [spices])
 
   return (
     <>
