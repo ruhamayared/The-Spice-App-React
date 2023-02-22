@@ -1,18 +1,15 @@
 import { Form } from "react-router-dom"
 import { useState } from "react"
 import SearchForm from "./Search"
+import CreateForm from "./CreateForm"
+import { Spices } from "../types/types"
 
 // Define the type of the props object that the SideBar component expects to receive.
 interface SidebarProps {
-  handleFilterData: (data: any) => void
+  handleFilterData: (data: Spices[]) => void
 }
 
 export default function SideBar(props: SidebarProps): any {
-  // useState to clear form after submission
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
-  const [image, setImage] = useState("")
-
   return (
     <>
       <div className="h-32 w-60 mt-10">
@@ -27,44 +24,7 @@ export default function SideBar(props: SidebarProps): any {
           </p>
 
           <SearchForm handleFilterData={props.handleFilterData} />
-
-          <h2 className="text-md font-bold mt-10">Create a Spice</h2>
-          <Form
-            onSubmit={(e) => {
-              setName(""), setDescription(""), setImage("")
-            }}
-            action="/create"
-            method="post"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Name of spice"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value)
-              }}
-            />
-            <input
-              type="text"
-              name="description"
-              placeholder="Description"
-              value={description}
-              onChange={(e) => {
-                setDescription(e.target.value)
-              }}
-            />
-            <input
-              type="text"
-              name="image"
-              placeholder="Image URL"
-              value={image}
-              onChange={(e) => {
-                setImage(e.target.value)
-              }}
-            />
-            <button className="rounded">Create New Spice</button>
-          </Form>
+          <CreateForm />
         </div>
       </div>
     </>
