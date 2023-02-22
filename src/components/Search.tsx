@@ -1,14 +1,6 @@
 import { useState, useEffect } from "react"
-import Spice from "./Spice"
 import url from "../url"
-
-// Define the shape of the "Spices" object that represents each individual spice.
-interface Spices {
-  id: number
-  name: string
-  description: string
-  image: string
-}
+import { Spices } from "../types/types"
 
 // Define the type of the props object that the SearchForm component expects to receive.
 interface SearchFormProps {
