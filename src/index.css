@@ -61,6 +61,10 @@
   .w-2\/5 {
     width: 90%;
   }
+}
+
+/* Styling for small screens for Index page */
+@media screen and (max-width: 1000px) {
 
   .main {
     display: flex;
@@ -71,4 +75,3 @@
     margin: 10px;
   }
 }
-
