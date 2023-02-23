@@ -5,9 +5,10 @@ import { Spices } from "../types/types"
 // Define the type of the props object that the SearchForm component expects to receive.
 interface SearchFormProps {
   handleFilterData: (data: Spices[]) => void
+  currentSpices: Spices[]
 }
 
-export default function SearchForm({ handleFilterData }: SearchFormProps) {
+export default function SearchForm({ handleFilterData, currentSpices }: SearchFormProps) {
   // Define three pieces of state: the current search query, the list of all spices, and the filtered list of spices.
   const [searchQuery, setSearchQuery] = useState<string>("")
   const [spices, setSpices] = useState<Spices[]>([])
@@ -37,7 +38,7 @@ export default function SearchForm({ handleFilterData }: SearchFormProps) {
   function handleReset() {
     setFilteredData(spices)
     setSearchQuery("")
-    handleFilterData(spices)
+    handleFilterData(currentSpices)
   }
 
   return (

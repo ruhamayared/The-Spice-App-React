@@ -9,6 +9,11 @@
   grid-template-columns: 20% 80%;
 }
 
+.sidebar{
+  margin-top: 1.75rem
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,5 +33,42 @@
     @apply block mx-auto w-full border-solid border-2 border-orange-300 rounded-md m-2 p-0.5;
   }
 
+}
+
+/* Styling for small screens for Show page */
+@media screen and (max-width: 640px) {
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  .w-62 {
+    width: 100%;
+  }
+  .w-1\/3 {
+    width: 100%;
+  }
+  .w-1\/2 {
+    width: 90%;
+  }
+  .text-md {
+    font-size: 0.875rem;
+  }
+  .mt-7 {
+    margin-top: 1.75rem;
+  }
+  .w-2\/5 {
+    width: 90%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar{
+    margin: 10px;
+  }
 }
 

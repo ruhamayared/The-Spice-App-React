@@ -17,6 +17,8 @@ const Index = () => {
     setFilteredData(spices)
   }, [spices])
 
+  const currentSpices = spices
+
   return (
     <>
       <div className="Header">
@@ -30,15 +32,24 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="main">
-        <SideBar handleFilterData={handleFilterData} />
+      <div className="contianer">
+        <div className="main">
+          <div className="sidebar">
+            <SideBar handleFilterData={handleFilterData} currentSpices={currentSpices} />
+          </div>
 
-        <div className="flex flex-wrap justify-center mt-5 mr-10">
-          {filteredData.map((spice: any) => (
-            <div className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60">
-              <Spice spice={spice} key={spice.id} />
-            </div>
-          ))}
+          <div className="flex flex-wrap justify-center mt-5">
+            {filteredData
+              .sort((a: any, b: any) => a.id - b.id)
+              .map((spice: any) => (
+                <div
+                  key={spice.id}
+                  className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60"
+                >
+                  <Spice spice={spice} />
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </>
