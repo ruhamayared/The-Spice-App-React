@@ -44,7 +44,7 @@ const Index = () => {
               .map((spice: any) => (
                 <div
                   key={spice.id}
-                  className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60"
+                  className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60 max-h-cardHeight"
                 >
                   <Spice spice={spice} />
                 </div>

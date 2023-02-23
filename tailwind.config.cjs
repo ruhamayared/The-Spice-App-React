@@ -10,6 +10,9 @@ module.exports = {
         primary: "#FFF5E4",
         secondary: colors.amber,
       },
+      maxHeight: {
+        cardHeight: "304px",
+      },
     },
   },
   plugins: [],
