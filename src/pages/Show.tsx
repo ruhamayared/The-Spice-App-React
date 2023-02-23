@@ -7,7 +7,7 @@ const Show = () => {
   return (
     <div className="App">
       <div className="Header">
-        <div className="flex items-center justify-between p-3 border-b-4 border-gray-500 ">
+        <div className="flex items-center justify-between p-3 border-b-4 border-gray-500">
           <h1 className="text-gray-700 text-4xl font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-500 from-green-700 underline underline-offset-3 decoration-8 decoration-pink-600">
               THE
@@ -22,12 +22,12 @@ const Show = () => {
         </div>
       </div>
 
-      <div className="bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border mt-20 border-gray-200 m-auto w-2/5">
+      <div className="bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border mt-20 border-gray-200 m-auto w-1/2">
         <div className="p-4">
           <h1 className="text-2xl font-bold mb-2">{spice.name}</h1>
           <div className="flex">
             <div className="w-1/3 m-auto">
-              <img src={spice.image} alt={spice.name} className="w-60 h-auto" />
+              <img src={spice.image} alt={spice.name} className="w-62 h-auto" />
             </div>
             <div className="flex-1 p-4 w-1/2 text-center m-auto">
               <h2 className="text-lg font-semibold">{spice.description}</h2>
