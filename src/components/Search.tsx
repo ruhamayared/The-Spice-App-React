@@ -27,7 +27,7 @@ export default function SearchForm({ handleFilterData, currentSpices }: SearchFo
 
   // Define a function that filters the list of spices by name, updates the filteredData state, and calls the handleFilterData prop with the filtered list.
   function handleSearch() {
-    const filtered = spices.filter((item: Spices) =>
+    const filtered = currentSpices.filter((item: Spices) =>
       item.name.toLowerCase().includes(searchQuery.toLowerCase())
     )
     setFilteredData(filtered)
