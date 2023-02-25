@@ -2,6 +2,7 @@ import Spice from "../components/Spice"
 import { useLoaderData } from "react-router-dom"
 import SideBar from "../components/Sidebar"
 import { useEffect, useState } from "react"
+import { Spices } from "../types/types"
 
 const Index = () => {
   const spices: any = useLoaderData()
@@ -41,7 +42,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center mt-5">
             {filteredData
               .sort((a: any, b: any) => a.id - b.id)
-              .map((spice: any) => (
+              .map((spice: Spices) => (
                 <div
                   key={spice.id}
                   className="flex bg-white opacity-90 rounded-lg shadow-md hover:shadow-lg border border-gray-200 pb-4 m-4 w-60 max-h-cardHeight"

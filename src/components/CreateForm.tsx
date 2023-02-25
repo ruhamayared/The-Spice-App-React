@@ -1,11 +1,16 @@
 import { useState } from "react"
 import { Form } from "react-router-dom"
 
-export default function CreateForm(props: any) {
+// Define an interface to specify the props that the CreateForm component will recieve.
+interface CreateFormProps {
+  handleCreateSpice: (event: React.FormEvent<HTMLFormElement>) => void
+}
+
+export default function CreateForm(props: CreateFormProps) {
   // useState to clear form after submission
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
-  const [image, setImage] = useState("")
+  const [name, setName] = useState<string>("")
+  const [description, setDescription] = useState<string>("")
+  const [image, setImage] = useState<string>("")
 
   return (
     <>
