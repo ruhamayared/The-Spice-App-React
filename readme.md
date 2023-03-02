@@ -13,6 +13,7 @@
 
 #### Frontend
 
+- React
 - Typescript
 - HTML
 - CSS
